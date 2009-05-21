@@ -1,0 +1,28 @@
+<p>
+  <b>First name:</b>
+  <%=h @artist.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%=h @artist.last_name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @artist.description %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @artist.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @artist.phone %>
+</p>
+
+
+<%= link_to 'Edit', edit_artist_path(@artist) %> |
+<%= link_to 'Back', artists_path %>
