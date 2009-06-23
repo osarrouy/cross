@@ -1,4 +1,7 @@
 class ArtistsController < ApplicationController
+  
+  layout 'public'
+  
   # GET /artists
   # GET /artists.xml
   def index

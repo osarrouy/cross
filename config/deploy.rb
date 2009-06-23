@@ -36,7 +36,7 @@ namespace :deploy do
 
   desc "Invoke the db migration in production mode"
   task :migrate, :roles => :app do
-    send(run_method, "cd #{current_path} && rake db:migrate RAILS_ENV=production ")     
+    run "cd #{current_path} && rake db:migrate RAILS_ENV=production "   
   end
 
 end

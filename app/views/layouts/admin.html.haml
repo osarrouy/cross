@@ -1,0 +1,23 @@
+!!! Strict
+%html{html_attrs}
+  %head
+    %title Cross
+    %meta{:http_equiv => "Content-type", :content => "text/html,charset=UTF-8"}
+    = stylesheet_link_tag("admin", "headers", "lists", "edition", "lazy", "growl")
+    = javascript_include_tag(:all)
+  %body
+    .header
+      .logo
+        %h1 Cross
+      %ul.menu
+        %li{:class => ("current" if controller.controller_name == "galleries")}
+          = link_to 'Galeries', admin_galleries_path
+        %li{:class => ("current" if controller.controller_name == "posts")}
+          = link_to 'Posts', admin_posts_path
+        %li{:class => ("current" if controller.controller_name == "artists")}
+          = link_to 'Artistes', admin_artists_path
+      .connection
+        toto |
+        = link_to('logout', admin_galleries_path)
+	
+    = yield

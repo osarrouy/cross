@@ -1,0 +1,81 @@
+.lazy_edition_panel {
+  clear: both;
+  padding: 1em;
+}
+
+.lazy_edition_panel .label {
+  float: left;
+  width: 30%;
+}
+
+.lazy_edition_panel .content {
+  float: right;
+  width: 70%;
+}
+
+.lazy_edition_panel .content button.lazy_button {
+  float: right;
+}
+
+/* REQUIRED BUTTON STYLES: */		
+button { 
+	position: relative;
+	border: 0; 
+	padding: 0;
+	cursor: pointer;
+	overflow: visible; /* removes extra side padding in IE */
+}
+
+button::-moz-focus-inner {
+	border: none;  /* overrides extra padding in Firefox */
+}
+
+button span { 
+	position: relative;
+	display: block; 
+	white-space: nowrap;	
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	/* Safari and Google Chrome only - fix margins */
+	button span {
+		margin-top: -1px;
+	}
+}
+
+
+/* OPTIONAL BUTTON STYLES for applying custom look and feel: */		
+button.lazy_button { 
+  float: right;
+	padding: 0 15px 0 0; 
+	height: 33px;
+	text-align: center; 
+	background: transparent url(/images/button_sprite.gif) no-repeat right -65px; 
+}
+	
+button.lazy_button span {
+  padding: 0 0 0 15px;
+  font-size: 1.2em;
+	height: 33px;
+	line-height: 33px;
+	background: transparent url(/images/button_sprite.gif) no-repeat left top; 
+	color:#fff; 
+}
+
+button.lazy_button span a {
+  color: white;
+  text-decoration: none;
+}
+
+button.lazy_button span a:hover {
+  color: white;
+  text-decoration: none;
+}
+	
+button.lazy_button:hover { /* the redundant class is used to apply the hover state with a script */
+	background-position: right -98px; 
+}
+	
+button.lazy_button:hover span {
+	background-position: 0 -33px;
+}

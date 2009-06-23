@@ -1,0 +1,18 @@
+<%= lazy_subheader(["Retourner à la liste des galeries", admin_galleries_path], :title => "Édition d'une galerie") %>
+
+<div id="photo_form" style="display:none">
+</div>
+
+<%= lazy_field @gallery, :title, :tag => :h4 %>
+
+<%= lazy_field @gallery, :artist_id do |g| "#{g.artist.first_name} #{g.artist.last_name}" end %>
+
+<%= lazy_field @gallery, :description %>
+
+<div id="gallery_photos_field" class="photos">
+  <%= render :partial => 'photos' %>
+</div>
+
+<iframe id="frame" name="frame" style="display:none"></iframe>
+  
+  

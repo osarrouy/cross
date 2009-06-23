@@ -1,0 +1,36 @@
+<%= lazy_subheader(["Retourner à la liste des galeries", admin_galleries_path], :title => "Création d'une galerie") %>
+
+<div class="form">
+
+	<% form_for [:admin, @gallery], :html => { :method => :post } do |f| %>
+
+		<% unless @gallery.errors.empty? %>
+		<div class="form_errors">
+			Il existe des erreurs dans le formulaire :
+			<ul>
+				<% @gallery.errors.each do |attribut, message| %>
+					<li><%= message -%></li>
+				<% end %>
+			</ul>
+		</div>
+		<% end %>
+
+		<div class="form_entries">
+			<p><%= f.label :name, 'Titre de la galerie :' %><%= f.text_field :title %></p>
+			<p>
+				<%= f.label :artiste_id, 'Artiste de la galerie :' %>
+				<%= f.collection_select :artist_id, Artist.find(:all),
+					:id, :first_name, { :prompt => 'Sélectionnez un artiste' } %></p>
+			<p>
+				<%= f.label :description, 'Description de la galerie' -%>
+				<%= f.text_area :description %>
+			</p>
+		</div>
+		
+		<div class="form_buttons">
+			<p><%= f.submit "Enregistrer" %></p>
+		</div>
+	
+	<% end %>
+
+</div>

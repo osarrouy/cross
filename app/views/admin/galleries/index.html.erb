@@ -1,0 +1,5 @@
+<%= lazy_subheader(["Nouvelle galerie", new_admin_gallery_path], :title => "Liste des galeries") %>
+
+<% @galleries.each do |gallery| %>
+  <%= thumb_gallery(gallery.photos, :title => gallery.title, :id => "gallery_#{gallery.id}",:url => admin_gallery_path(gallery)) %>
+<% end %>

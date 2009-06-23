@@ -1,0 +1,81 @@
+.header {
+	background-color: #383838;
+	color: white;
+	height: 70px;
+	margin: 0;
+	padding: 0 1em;
+}
+
+.header .logo {
+	float: left;
+	height: 70px;
+	line-height: 70px;
+	margin: 0 3em 0 0;
+}
+
+.header .connection {
+	float: right;
+	height: 70px;
+	line-height: 70px;
+	text-align: right;
+}
+
+.header .menu {
+	float: left;
+	height: 70px;
+	line-height: 70px;
+	font-size: medium;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.header .menu li {
+	display: inline;
+	margin: 0 2em 0 0;
+	padding: 0.5em;
+}
+
+.menu li.current a {
+	background-color: #e00000;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+}
+
+.menu li a:hover {
+	background-color: #666666;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+}
+
+.menu li a {
+	color: white;
+	padding: 0.5em;
+	text-decoration: none;
+}
+
+.odd {
+/*	background-color: #e8e8e8;*/
+	background-color: #383838;
+}
+
+.even {
+	background-color: #484848;
+}
+
+table.layout {
+	border: none;
+}
+

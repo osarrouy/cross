@@ -1,0 +1,25 @@
+!!! Strict
+%html{html_attrs}
+  %head
+    %title Cross
+    %meta{:http_equiv => "Content-type", :content => "text/html,charset=UTF-8"}
+    = stylesheet_link_tag("public")
+    = javascript_include_tag(:all)
+  %body
+    .header
+      %div
+        = image_tag 'cross_header.jpg'
+      %ul#menu_haut
+        %li
+          = link_to "ARTISTES", "#", :class => "left"
+        %li
+          = link_to "CROSS", "#"
+        %li
+          = link_to "NEWS", "#"
+        %li
+          = link_to "ARCHIVES", "#"
+        %li
+          = link_to "CONTACTS", "#"
+        %li
+          = link_to "LIENS", "#"
+    = yield

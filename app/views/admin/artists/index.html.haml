@@ -1,0 +1,9 @@
+- leo_subheader(["Nouvel artiste", new_admin_artist_path], :title => "Liste des artistes")
+
+- leo_list(@artists, :table => { :class => "leo_list" }) do |l|
+  - l.add_column('Prénom', :first_name)
+  - l.add_column('Nom', :last_name)
+  - l.add_column('Email', :email)
+  - l.add_column('Téléphone', :phone)
+  - l.add_column('Description', :description)
+  = l.build

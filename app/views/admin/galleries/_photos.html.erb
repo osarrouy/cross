@@ -1,0 +1,3 @@
+<%= lazy_photos(@gallery) %>
+<%= link_to_remote '+',  :url => new_admin_gallery_photo_path(@gallery), :method => :get, :update => "photo_form",
+:complete => "new Effect.SlideDown('photo_form')", :html => { :class => "thumb" } %>

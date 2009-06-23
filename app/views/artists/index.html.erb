@@ -1,28 +1,22 @@
-<h1>Listing artists</h1>
+<div id="menu_gauche_wrapper">
+	<ul id="menu_gauche">
+		<% @artists.each do |artist| %>
+			<li><%= link_to artist.first_name, artist_path(artist) %></li>
+		<% end %>
+	</ul>
+</div>
 
-<table>
-  <tr>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Description</th>
-    <th>Email</th>
-    <th>Phone</th>
-  </tr>
-
-<% @artists.each do |artist| %>
-  <tr>
-    <td><%=h artist.first_name %></td>
-    <td><%=h artist.last_name %></td>
-    <td><%=h artist.description %></td>
-    <td><%=h artist.email %></td>
-    <td><%=h artist.phone %></td>
-    <td><%= link_to 'Show', artist %></td>
-    <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
-    <td><%= link_to 'Destroy', artist, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New artist', new_artist_path %>
+<div class="content">
+	<a href="benjamin_bonaventure.php"> <img id="img" src="images/image_ben_mini.jpg" \></a>
+	<a href="lison_de_reider.php"> <img id="img" src="images/image_lison_mini.jpg" \></a>
+	<br/>
+	<a href="gaspard_drubigny.php"> <img id="img" src="images/image_gaspard_mini.jpg" \></a>
+	<a href="morgane_fourey.php"> <img id="img" src="images/image_morgane_mini.jpg" \></a>
+	<br/>
+	<a href="yannick_dubois.php"> <img id="img" src="images/image_yannick_mini.jpg" \></a>
+	<a href="gregoire_laisne.php"> <img id="img" src="images/image_gregoire_mini.jpg" \></a>
+	<br/>
+	<a href="lise_lecocq.php"> <img id="img" src="images/image_lise_mini.jpg" \></a>
+	<a href="simon_nicaise.php"> <img id="img" src="images/image_simon_mini.jpg" \></a>
+	
+</div>

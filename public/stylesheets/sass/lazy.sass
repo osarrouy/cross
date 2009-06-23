@@ -1,0 +1,44 @@
+!subheader_background_color = #606060
+!subtitle_color = #383838
+!submenu_link_color = #ffffff
+!submenu_hover_color = #3399ff
+
+.subheader
+  :background-color = !subheader_background_color
+  :height 45px
+  :line-height 45px
+  :padding 0 1em
+  
+  .subtitle
+    :color = !subtitle_color
+    :display inline-block
+    :height 45px
+    :line-height 45px
+    :margin 0 2em 0 0
+    
+  .submenu
+    :display inline-block
+    :height 45px
+    :line-height 45px
+    :list-style-type none
+
+    li
+      :display inline-block
+      :margin 0 2em 0 0
+      
+      a
+        :color = !submenu_link_color
+        :padding 0.5em
+        :text-decoration none
+      
+      a:hover
+        :background-color = !submenu_hover_color
+        :-moz-border-radius-topleft 10px
+        :-moz-border-radius-topright 10px
+        :-moz-border-radius-bottomleft 10px
+        :-moz-border-radius-bottomright 10px
+        :-webkit-border-top-left-radius 10px
+        :-webkit-border-top-right-radius 10px
+        :-webkit-border-bottom-left-radius 10px
+        :-webkit-border-bottom-right-radius 10px
+

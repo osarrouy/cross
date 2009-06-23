@@ -1,0 +1,76 @@
+table.list tr {
+	border-collapse: collapse;
+}
+
+table.list td {
+	border-collapse: collapse;
+	padding: 1em;
+}
+
+table.lazy_list {
+	width: 100%;
+}
+table.lazy_list tr {
+	border-collapse: collapse;
+}
+
+table.lazy_list td {
+	border-collapse: collapse;
+	padding: 1em;
+}
+
+table.lazy_list {
+	border-collapse: collapse;
+}
+
+table.lazy_list th {
+	background-color: #989898;
+/*	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;*/
+	border-collapse: collapse;
+	font-weight: normal;
+	padding: 0.5em;
+}
+
+.thirty_percent_column {
+	width: 30%;
+}
+
+table.edition_list {
+	vertical-align: top;
+	width: 100%;
+}
+
+table.edition_list tr {
+	border-collapse: collapse;
+	vertical-align: top;
+}
+
+table.edition_list td {
+	border-collapse: collapse;
+	padding: 1em;
+	vertical-align: top;
+}
+
+table.edition_list td.label {
+	text-align: left;
+}
+
+table.edition_list td.content {
+	text-align: left;
+}
+
+table.edition_list td.links {
+	text-align: right;
+}
+
+table.edition_list .big {
+	font-size: 18px;
+	line-height: 20px;
+}

@@ -1,0 +1,8 @@
+<% case params[:attribute]
+   when 'title' %>
+    <%= lazy_attribute(@gallery, :title, :tag => :h4) %>
+<% when 'artist_id' %>
+      <%= lazy_attribute @gallery, :artist_id do |g| "#{g.artist.first_name} #{g.artist.last_name}" end %>
+<% when 'description' %>
+    <%= lazy_attribute(@gallery, :description) %>
+<% end %>

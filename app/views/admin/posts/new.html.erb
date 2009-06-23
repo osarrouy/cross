@@ -1,0 +1,32 @@
+<%= lazy_subheader(["Retourner à la liste des posts", admin_posts_path], :title => "Création d'une post") %>
+
+<div class="form">
+
+	<% form_for [:admin, @post], :html => { :method => :post } do |f| %>
+
+		<% unless @post.errors.empty? %>
+		<div class="form_errors">
+			Il existe des erreurs dans le formulaire :
+			<ul>
+				<% @post.errors.each do |attribut, message| %>
+					<li><%= message -%></li>
+				<% end %>
+			</ul>
+		</div>
+		<% end %>
+
+		<div class="form_entries">
+			<p><%= f.label :title, 'Titre du post :' %><%= f.text_field :title %></p>
+
+				<%= f.label :body, 'Contenu du post :' -%>
+				<%= f.text_area :body %>
+			</p>
+		</div>
+		
+		<div class="form_buttons">
+			<p><%= f.submit "Enregistrer" %></p>
+		</div>
+	
+	<% end %>
+
+</div>

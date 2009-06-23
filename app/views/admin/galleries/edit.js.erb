@@ -1,0 +1,10 @@
+<% case params[:attribute]
+  when 'title' %>
+    <%= lazy_form(@gallery, :title) %>
+    <% when 'artist_id' %>
+      <%= lazy_form @gallery, :artist_id do |g|
+          collection_select(:gallery, :artist_id, Artist.find(:all), :id, :first_name, {:prompt => true})
+        end %>
+  <% when 'description' %>
+    <%= lazy_form(@gallery, :description) %>
+<% end %>
