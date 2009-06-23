@@ -1,4 +1,5 @@
-<%= lazy_subheader(["Retourner à la liste des galeries", admin_galleries_path], :title => "Édition d'une galerie") %>
+<%= lazy_subheader(["Retourner à la liste des galeries", admin_galleries_path], 
+["Supprimer cette galerie", admin_gallery_path(@gallery), { :confirm => 'Êtes-vous sûr ?' }], :title => "Édition d'une galerie") %>
 
 <div id="photo_form" style="display:none">
 </div>

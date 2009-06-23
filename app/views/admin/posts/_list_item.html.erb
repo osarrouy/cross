@@ -1,4 +1,8 @@
 <% post = list_item %>
+<% post_counter = list_item_counter %>
 
-<%= content_tag :h4, post.title %>
-<%= content_tag :p , post.body %>
+<div class="list_item <%= post_counter.even? ? 'list_item_even' : 'list_item_odd' %>">
+  <%= link_to "Modifier", admin_post_path(post), :class => "right" %>
+  <%= content_tag :h4, post.title %>
+  <%= content_tag :p , post.body %>
+</div>

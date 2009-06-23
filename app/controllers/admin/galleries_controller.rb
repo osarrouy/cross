@@ -61,4 +61,13 @@ class Admin::GalleriesController < ApplicationController
     end
   end
   
+  def destroy
+    @gallery = Gallery.find(params[:id])
+    
+    @gallery.destroy
+    respond_to do |format|
+      format.html { redirect_to admin_galleries_path }
+    end
+  end
+  
 end

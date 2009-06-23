@@ -3,7 +3,7 @@ class Admin::PostsController < ApplicationController
   layout 'admin'
   
   def index
-    @posts = Post.find(:all)
+    @posts = Post.find(:all, :order => "created_at DESC")
 
     respond_to do |format|
       format.html

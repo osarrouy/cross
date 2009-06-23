@@ -12,8 +12,13 @@ module ApplicationHelper
     end
     subheader << '<ul class="submenu">'
     args.each do |link|
+      link_options = link.last.class == Hash ? link.last : {} 
       subheader << '<li>'
-      subheader << link_to(link.first, link.last)
+      if link_options[:confirm]
+        subheader << link_to(link.first, link[1], :method => :delete, :confirm => link_options[:confirm])
+      else
+        subheader << link_to(link.first, link[1])
+      end
       subheader << '</li>'
     end
     subheader << '</ul>'
