@@ -1,6 +1,6 @@
 # Settings specified here will take precedence over those in config/environment.rb
 
-config.action_controller.relative_url_root = '/cross'
+# config.action_controller.relative_url_root = '/cross'
 
 # The production environment is meant for finished, "live" apps.
 # Code is not reloaded between requests

@@ -4,7 +4,7 @@ set :scm, :git
 set :runner, "rails"
 set :user, "deploy"
 set :branch, "master"
-set :deploy_via, :remote_cache
+# set :deploy_via, :remote_cache
 set :keep_releases, 3 
 set :box, "box"
 
