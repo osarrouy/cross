@@ -1,0 +1,32 @@
+<%= lazy_subheader(["Retourner à la liste des artistes", admin_artists_path], :title => "Création d'un artiste") %>
+
+<div class="form">
+
+	<% form_for [:admin, @artist], :html => { :method => :post } do |f| %>
+
+		<% unless @artist.errors.empty? %>
+		<div class="form_errors">
+			Il existe des erreurs dans le formulaire :
+			<ul>
+				<% @artist.errors.each do |attribut, message| %>
+					<li><%= message -%></li>
+				<% end %>
+			</ul>
+		</div>
+		<% end %>
+
+		<div class="form_entries">
+			<p><%= f.label :first_name, 'Prénom :' %><%= f.text_field :first_name %></p>
+      <p><%= f.label :last_name, 'Nom :' %><%= f.text_field :last_name %></p>
+      <p><%= f.label :email, 'Email :' %><%= f.text_field :email %></p>
+      <p><%= f.label :phone, 'Téléphone :' %><%= f.text_field :phone %></p>
+      <p><%= f.label :description, 'Description :' -%><%= f.text_area :description %></p>
+		</div>
+		
+		<div class="form_buttons">
+			<p><%= f.submit "Enregistrer" %></p>
+		</div>
+	
+	<% end %>
+
+</div>

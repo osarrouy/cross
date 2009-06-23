@@ -245,6 +245,27 @@ a img {
   margin: 6px;
 }
 
+.form input {
+  font-family: inherit;
+  font-size: 1em;
+  line-height: 1em;
+  padding: 5px;
+}
+
+.form textarea {
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1em;
+  padding: 5px;
+}
+
+.form select {
+  font-family: inherit;
+  font-size: inherit
+  line-height: 1em;
+  margin: 6px;
+}
+
 .photos {
   padding: 10px 5px;
 }

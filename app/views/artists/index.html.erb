@@ -1,10 +1,4 @@
-<div id="menu_gauche_wrapper">
-	<ul id="menu_gauche">
-		<% @artists.each do |artist| %>
-			<li><%= link_to artist.first_name, artist_path(artist) %></li>
-		<% end %>
-	</ul>
-</div>
+<%= render :partial => 'artists_menu' %>
 
 <div class="content">
 	<a href="benjamin_bonaventure.php"> <img id="img" src="images/image_ben_mini.jpg" \></a>
@@ -18,5 +12,4 @@
 	<br/>
 	<a href="lise_lecocq.php"> <img id="img" src="images/image_lise_mini.jpg" \></a>
 	<a href="simon_nicaise.php"> <img id="img" src="images/image_simon_mini.jpg" \></a>
-	
 </div>

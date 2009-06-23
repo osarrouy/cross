@@ -1,28 +1,22 @@
+<%= render :partial => 'artists_menu' %>
+
+<div id="menu_droite">
+  <% @artist.galleries.each do |gallery| %>
+    <%= image_tag(gallery.photos.first.image.url(:thumb) ) unless gallery.photos.blank? %>
+  <% end %>
+</div>
+
+<div class="content">
 <p>
-  <b>First name:</b>
-  <%=h @artist.first_name %>
+  <%= "#{@artist.first_name} #{@artist.last_name}" %>
 </p>
 
 <p>
-  <b>Last name:</b>
-  <%=h @artist.last_name %>
+  <%=h @artist.email %>
 </p>
-
 <p>
-  <b>Description:</b>
   <%=h @artist.description %>
 </p>
 
-<p>
-  <b>Email:</b>
-  <%=h @artist.email %>
-</p>
+</div>
 
-<p>
-  <b>Phone:</b>
-  <%=h @artist.phone %>
-</p>
-
-
-<%= link_to 'Edit', edit_artist_path(@artist) %> |
-<%= link_to 'Back', artists_path %>

@@ -1,0 +1,9 @@
+<% artists = Artist.find(:all) %>
+
+<div id="menu_gauche_wrapper">
+	<ul id="menu_gauche">
+		<% artists.each do |artist| %>
+			<li><%= link_to artist.first_name, artist_path(artist) %></li>
+		<% end %>
+	</ul>
+</div>

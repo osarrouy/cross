@@ -1,0 +1,8 @@
+<% artist = list_item %>
+<% artist_counter = list_item_counter %>
+
+<div class="list_item <%= artist_counter.even? ? 'list_item_even' : 'list_item_odd' %>">
+  <%= link_to "Modifier", edit_admin_artist_path(artist), :class => "right" %>
+  <%= content_tag :h4, "#{artist.first_name} #{artist.last_name}" %>
+  <%= content_tag :p , artist.description %>
+</div>
