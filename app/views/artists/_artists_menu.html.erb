@@ -1,4 +1,4 @@
-<% artists = Artist.find(:all) %>
+<% artists = Artist.find(:all, :order => "last_name ASC" )  %>
 
 <div id="menu_gauche_wrapper">
 	<ul id="menu_gauche">

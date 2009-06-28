@@ -16,6 +16,8 @@
           = link_to 'Posts', admin_posts_path
         %li{:class => ("current" if controller.controller_name == "artists")}
           = link_to 'Artistes', admin_artists_path
+        %li{:class => ("current" if controller.controller_name == "cross")}
+          = link_to 'Cross', :controller => 'admin/cross', :action => "index"
       .connection
         toto |
         = link_to('logout', admin_galleries_path)

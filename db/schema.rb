@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090623123732) do
+ActiveRecord::Schema.define(:version => 20090628150955) do
 
   create_table "artists", :force => true do |t|
     t.string   "first_name"
@@ -17,6 +17,12 @@ ActiveRecord::Schema.define(:version => 20090623123732) do
     t.text     "description"
     t.string   "email"
     t.string   "phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cross", :force => true do |t|
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

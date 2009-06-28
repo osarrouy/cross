@@ -1,0 +1,7 @@
+<% gallery = list_item %>
+<% counter = list_item_counter %>
+
+<li><%= link_to_remote gallery.title, :url => gallery_path(gallery.id, :js), :method => :get,
+      :before => "new Effect.BlindUp('artist', { queue: { position: 'front', scope: 'contentscope' } });",
+      :complete => "insertGalleryToPage.delay(1.5, request, #{gallery.id})" %>
+</li>

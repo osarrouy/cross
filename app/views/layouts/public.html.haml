@@ -4,22 +4,24 @@
     %title Cross
     %meta{:http_equiv => "Content-type", :content => "text/html,charset=UTF-8"}
     = stylesheet_link_tag("public")
-    = javascript_include_tag(:all)
+    = stylesheet_link_tag("shadowbox")
+    = javascript_include_tag(:defaults)
+    = javascript_include_tag("shadowbox")
   %body
     .header
       %div
         = image_tag 'cross_header.jpg'
       %ul#menu_haut
         %li
-          = link_to "ARTISTES", "#", :class => "left_artist"
+          = link_to "ARTISTES", artists_path, :class => "left_artist"
         %li
-          = link_to "CROSS", "#"
+          = link_to "CROSS", :controller => 'cross', :action => 'index'
         %li
-          = link_to "NEWS", "#"
+          = link_to "NEWS", posts_path
         %li
-          = link_to "ARCHIVES", "#"
-        %li
-          = link_to "CONTACTS", "#"
+          = link_to "CONTACTS", :controller => 'contacts', :action => 'index'
         %li
           = link_to "LIENS", "#"
+        %li
+          = link_to "GALERIES", "#", :class => "right", :id => "galeries_menu",  :style => "display:none;"
     = yield

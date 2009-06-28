@@ -1,0 +1,10 @@
+<% post = list_item %>
+<% counter = list_item_counter  %>
+
+<div <%= counter.odd? ? 'class="item even"' : 'class="item"'%>>
+  <div class="info">
+    <h4><%=h post.title %></h4>
+    <p class="italic small"><%=h post.created_at.to_date %></p>
+  </div>
+  <p class="justify"><%=h post.body %></p>
+</div>

@@ -1,5 +1,5 @@
 body {
-	font-family: arial;
+	font-family: Arial;
 	font-size: small;
 	text-align: center;
 }
@@ -25,29 +25,26 @@ body {
 }
 
 #menu_gauche {
-	letter-spacing: -0.5px;
-	list-style-type: none;
 	font-weight: bold;
 	line-height: 26px;
-	color: #737373;
-	margin: 0;
+	list-style-type: none;
+	margin: 50px 0 0 0;
 	padding: 0 0 0 40px;
 	text-align: left;
 }
 
 #menu_droite_wrapper {
 	float: right;
-	width: 150px
+	width: 220px;
 }
 
 #menu_droite {
-  float: right;
-	list-style-type: none;
 	font-weight: bold;
-	margin: 0;
-	padding: 0 0 0 1em;
-	text-align: center;
-	width: 220px;
+	line-height: 26px;
+	list-style-type: none;
+	margin: 50px 0 0 0;
+	padding: 0 40px 0 0;
+	text-align: right;
 }
 
 .spacer {
@@ -63,6 +60,14 @@ body {
 .left_artist {
   position: absolute;
   left: 40px;
+  padding: 0;
+  margin: 0;
+
+}
+
+.right {
+  position: absolute;
+  right: 40px;
   padding: 0;
   margin: 0;
 
@@ -90,6 +95,7 @@ body {
 	width: 100%;
 }
 
+/* Mise en forme de liens */
 
 a {
 	text-decoration: none;
@@ -104,140 +110,69 @@ a:focus {
 	color : #000000;
 }
 
-#texte {
-	position: absolute;
-	width: 485px;
-	text-align: justify;
-	font-size: small;
-	color : #000000;
-	text-indent: 5px;
-	width: 485px;
-	height: 130px;
-	left: 289px;
-	padding-right: 6px;
-	overflow: auto;
-	margin: auto;
-	bottom: 2px;
-	border: 0px inset grey;
-}
-
-#texte_archive {
-	position: absolute;
-	width: 50%;
-	text-align: center;
-	font-size: small;
-	font-size: x-small;
-	font-weight: bolder;
-	color : #000000;
-	text-indent: 5px;
-	width: 485px;
-	height: 480px;
-	left: 28%;
-	padding-right: 6px;
-	overflow: auto;
-	margin: auto;
-	bottom: 0%;
-	border: 0px inset grey;
-}
-
-#texte_contacts {
-	position: absolute;
-	width: 50%;
-	text-align: center;
-	font-size: small;
-	font-weight: bold;
-	color : #000000;
-	text-indent: 5px;
-	width: 485px;
-	height: 480px;
-	left: 28%;
-	padding-right: 6px;
-	overflow: auto;
-	margin: auto;
-	bottom: 0%;
-	border: 0px inset grey;
-}
-
-#texte_liens {
-	position: absolute;
-	width: 50%;
-	text-align: center;
-	font-size: small;
-	font-weight: bold;
-	color : #000000;
-	text-indent: 5px;
-	width: 485px;
-	height: 475px;
-	left: 28%;
-	padding-right: 6px;
-	overflow: auto;
-	margin: auto;
-	bottom: 0%;
-}
-
-#texte_news {
-	position: absolute;
-	width: 50%;
-	text-align: center;
-	font-size: small;
-	font-weight: bold;
-	color : #000000;
-	text-indent: 5px;
-	width: 485px;
-	height: 475px;
-	left: 28%;
-	padding-right: 6px;
-	overflow: auto;
-	margin: auto;
-	bottom: 0%;
-}
+/* Mise en forme du contenu */
 
 .content {
-	text-align: center;
 	color : #000000;
-	height: 500px;
-	margin: 0 220px 0 220px;
+	margin: 40px 260px 0 260px;
+	text-align: left;
 }
 
-#contenu_centre {
-	text-align: center;
-	font-size: small;
-	font-weight: bold;
-	color : #000000;
-	margin: 0 150px 0 220px;
-	height: 500px;
-	overflow: auto;
-	text-align: center;
-	width: auto;
+/* Mise en forme de la présentation des artistes */
+
+#artist {
+  overflow: hidden;
 }
 
-#image_bis {
-	position: absolute;
-	top: 20%;
-	left: 28%;
-	margin: auto;
-	height: auto;
-	width: auto;
-	max-width: 497px;
-	max-height: 337px;
+
+.thumbs_gallery {
+  padding: 1.5em 0 0 0;
 }
 
-.news {
-	padding: 0 0.5em 0 0.5em;
+.thumbs_gallery a img {
+  border: none;
 }
 
-.archives {
-	padding: 0 0.5em 0 0.5em;
+.thumbs_gallery .thumb:hover {
+  opacity: 0.6;
 }
 
-#image {
-	position: absolute;
-	top: 122px;
-	bottom: 168px;
-	left: 289px;
-	margin: auto;
-	height: auto;
-	width: auto;
-	max-width: 497px;
-	max-height: 337px;
+/* Mise en forme des posts */
+
+.item {
+  padding: 0.5em;
+}
+
+.item .info * {
+  margin: 3px 0;
+}
+
+/* Mise en forme générique */
+
+.even {
+  background-color: #dddddd;
+}
+
+.align_left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.indent {
+  text-indent: 20px;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.small {
+  font-size: x-small;
 }

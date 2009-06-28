@@ -102,3 +102,8 @@ function manageDeleteIcon(element) {
   div.observe('mouseover', function(event) { deleteIcon.show();  });
   div.observe('mouseout', function(event) {  deleteIcon.hide(); });
 }
+
+function insertGalleryToPage(request, id) {
+  $('artist').update(request.responseText);
+  new Effect.BlindDown('artist', { queue: { position: 'end', scope: 'contentscope' } });
+}

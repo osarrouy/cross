@@ -1,0 +1,9 @@
+<div class="content">
+  <% @artists.each_with_index do |artist, index| %>
+    <div <%= index.odd? ? 'class="item even align_left"' : 'class="item align_left"'%>>
+      <h4><%=h "#{artist.first_name} #{artist.last_name}" %></h4>
+      <p><%=h "mail : #{artist.email}" unless artist.email.blank? %></p>
+      <p><%=h "téléphone : #{artist.phone}" unless artist.phone.blank? %></p>
+    </div>
+  <% end %> 
+</div>

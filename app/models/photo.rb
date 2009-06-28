@@ -2,7 +2,7 @@ class Photo < ActiveRecord::Base
   
   belongs_to :gallery
   
-  has_attached_file :image, :styles => { :medium => "250x250>", :thumb => "x90>" },
+  has_attached_file :image, :styles => { :medium => "250x250>", :thumb => "x90>", :mini => "60x60#" },
     :url => "/photos/:id/:style/:basename.:extension",
     :path => ":rails_root/public/photos/:id/:style/:basename.:extension"
 

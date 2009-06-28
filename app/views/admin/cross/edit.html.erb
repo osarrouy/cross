@@ -1,0 +1,26 @@
+<div class="form">
+
+	<% form_for @cross, :url => { :controller => 'admin/cross', :action => "update" }, :html => { :method => :put } do |f| %>
+
+		<% unless @cross.errors.empty? %>
+		<div class="form_errors">
+			Il existe des erreurs dans le formulaire :
+			<ul>
+				<% @cross.errors.each do |attribut, message| %>
+					<li><%= message -%></li>
+				<% end %>
+			</ul>
+		</div>
+		<% end %>
+
+		<div class="form_entries">
+			<p><%= f.label :description, 'Description :' %><%= f.text_area :description %></p>
+		</div>
+		
+		<div class="form_buttons">
+			<p><%= f.submit "Enregistrer" %></p>
+		</div>
+	
+	<% end %>
+
+</div>

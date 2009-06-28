@@ -1,22 +1,21 @@
+<%= javascript_tag "window._token = '#{form_authenticity_token}';" %>
+<%= javascript_tag "$('galeries_menu').show()" %>
+
 <%= render :partial => 'artists_menu' %>
 
-<div id="menu_droite">
-  <% @artist.galleries.each do |gallery| %>
-    <%= image_tag(gallery.photos.first.image.url(:thumb) ) unless gallery.photos.blank? %>
-  <% end %>
+<div id="menu_droite_wrapper">
+  <ul id="menu_droite">
+    <%= render :partial => "galleries/list_item", :collection => @artist.galleries %>
+  </ul>
 </div>
 
 <div class="content">
-<p>
-  <%= "#{@artist.first_name} #{@artist.last_name}" %>
-</p>
+  <div id="artist">
+    <h4 class="center"><%= "#{@artist.first_name} #{@artist.last_name}" %></h4>
+    <p class="indent justify"><%=h @artist.description %></p>
+  </div>
+<div>
+  
+<script type="text/javascript">Shadowbox.init();</script>
 
-<p>
-  <%=h @artist.email %>
-</p>
-<p>
-  <%=h @artist.description %>
-</p>
-
-</div>
 

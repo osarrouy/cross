@@ -47,6 +47,10 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :artists
   end
   
+  map.resources :artists
+  map.resources :galleries, :member => { :minis => :get }
+  map.resources :posts
+  
   map.login '/admin', :controller => 'admin/galleries', :action => 'index'
   
   map.connect ':controller/:action/:id', :controller => 'artists'

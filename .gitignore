@@ -2,5 +2,6 @@ log/*.log
 tmp/**/*
 .DS_Store
 public/cache/**/*
+public/photos/*
 doc/api
 doc/app
