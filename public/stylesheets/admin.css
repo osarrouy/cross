@@ -291,6 +291,15 @@ a img {
   left: 10px;
 }
 
+.item {
+  padding: 0.5em;
+  clear: both;
+}
+
+.item .title {
+  text-align: center;
+}
+
 .thumb_gallery_wrapper {
   float: left;
   margin: 1em 1em 0 0;

@@ -3,7 +3,7 @@ class Admin::GalleriesController < ApplicationController
   layout 'admin'
 
   def index
-    @galleries = Gallery.find(:all)
+    @artists = Artist.find(:all, :include => [ :galleries ])
 
     respond_to do |format|
       format.html

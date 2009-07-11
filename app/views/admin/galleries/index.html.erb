@@ -1,5 +1,11 @@
 <%= lazy_subheader(["Nouvelle galerie", new_admin_gallery_path], :title => "Liste des galeries") %>
 
-<% @galleries.each do |gallery| %>
-  <%= thumb_gallery(gallery.photos, :title => gallery.title, :id => "gallery_#{gallery.id}",:url => admin_gallery_path(gallery)) %>
+<% @artists.each_with_index do |artist, index| %>
+  <div <%= index.odd? ? 'class="item even"' : 'class="item"'%>>
+    <h4 class="title"><%= artist.first_name %></h4>
+    <% artist.galleries.each do |gallery| %>
+      <%= thumb_gallery(gallery.photos, :title => gallery.title, :id => "gallery_#{gallery.id}",:url => admin_gallery_path(gallery)) %>
+    <% end %>
+    <div class="spacer"></div>
+  </div>
 <% end %>

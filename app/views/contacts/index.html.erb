@@ -5,5 +5,6 @@
       <p><%=h "mail : #{artist.email}" unless artist.email.blank? %></p>
       <p><%=h "téléphone : #{artist.phone}" unless artist.phone.blank? %></p>
     </div>
+    <%= render :partial => 'separator' unless(index == @artists.length - 1)%>
   <% end %> 
 </div>

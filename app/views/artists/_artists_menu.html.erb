@@ -4,9 +4,9 @@
 	<ul id="menu_gauche">
 		<% artists.each do |artist| %>
 		  <% if((@artist and @artist.id == artist.id) or (@gallery and @gallery.artist.id == artist.id)) %>
-		    <li><%= link_to artist.first_name, artist_path(artist), :class => 'active' %></li>
+		    <li><%= link_to "#{artist.first_name} #{artist.last_name}", artist_path(artist), :class => 'active' %></li>
 		  <% else %>
-			  <li><%= link_to artist.first_name, artist_path(artist) %></li>
+			  <li><%= link_to "#{artist.first_name} #{artist.last_name}", artist_path(artist) %></li>
 		  <% end %>
 		<% end %>
 	</ul>

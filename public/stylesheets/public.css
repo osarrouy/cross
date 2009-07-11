@@ -19,9 +19,14 @@ body {
 	border-style: none;
 }
 
+.cross_bg {
+  margin: 40px 0 0 0;
+  width: 70%;
+}
+
 #menu_gauche_wrapper {
 	float: left;
-	width: 220px;
+	width: 15%;
 }
 
 #menu_gauche {
@@ -39,7 +44,7 @@ body {
 
 #menu_droite_wrapper {
 	float: right;
-	width: 220px;
+	width: 15%;
 }
 
 #menu_droite {
@@ -81,15 +86,12 @@ body {
 
 }
 
-
 #menu_haut li {
 	display: inline;
 	margin : 0 3em 0 0;
 	font-size: small;
 	font-weight: bold;
 }
-
-
 
 #menu_haut li.last_link {
 	margin : 0;
@@ -128,16 +130,14 @@ a:focus {
 
 .content {
 	color : #000000;
-	margin: 40px 260px 0 260px;
+	margin: 40px 20% 0 20%;
 	text-align: left;
+	height: 500px;
+	width: 60%;
+  overflow: auto;
 }
 
 /* Mise en forme de la présentation des artistes */
-
-#artist {
-  overflow: hidden;
-}
-
 
 .thumbs_gallery {
   padding: 1.5em 0 0 0;
@@ -164,7 +164,12 @@ a:focus {
 /* Mise en forme générique */
 
 .even {
-  background-color: #dddddd;
+}
+
+.separator {
+  height: 1px;
+  border: none;
+  border-top: 1px solid black;
 }
 
 .align_left {
