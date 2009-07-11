@@ -1,0 +1,19 @@
+<div id="menu_droite_wrapper">
+  <ul id="menu_droite">
+    <%= render :partial => "galleries/list_item", :collection => @gallery.artist.galleries %>
+  </ul>
+</div>
+
+<div class="content">
+  <div id="artist">
+    <div class="indent justify"><%=h @gallery.description %></div>
+    <div class="thumbs_gallery">
+      <% @gallery.photos.each do |photo| %>
+        <%= link_to(image_tag(photo.image.url(:mini), :class => 'thumb' ), photo.image.url) %>
+      <% end %>
+    </div>
+  </div>
+</div>
+    <script type="text/javascript">
+      Shadowbox.setup(".thumbs_gallery a", { title: "<%= @gallery.title %>", gallery: "<%= @gallery.title %>" });
+    </script>

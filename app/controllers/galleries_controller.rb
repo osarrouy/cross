@@ -6,8 +6,7 @@ class GalleriesController < ApplicationController
     @gallery = Gallery.find(params[:id])
     
     respond_to do |format|
-      format.json { render :json => @gallery.to_json }
-      format.js
+      format.html
     end
   end
   

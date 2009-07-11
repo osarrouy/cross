@@ -10,18 +10,22 @@
   %body
     .header
       %div
-        = image_tag 'cross_header.jpg'
+        = link_to(image_tag('cross_header.jpg'), :controller => 'cross', :action => 'index')
       %ul#menu_haut
         %li
           = link_to "ARTISTES", artists_path, :class => "left_artist"
-        %li
+        %li.first_link
           = link_to "CROSS", :controller => 'cross', :action => 'index'
         %li
           = link_to "NEWS", posts_path
         %li
+          = link_to "ARCHIVES", posts_path
+        %li
           = link_to "CONTACTS", :controller => 'contacts', :action => 'index'
-        %li
+        %li.last_link
           = link_to "LIENS", "#"
-        %li
-          = link_to "GALERIES", "#", :class => "right", :id => "galeries_menu",  :style => "display:none;"
+    
+    = render :partial => '/artists/artists_menu'
+    
     = yield
+    

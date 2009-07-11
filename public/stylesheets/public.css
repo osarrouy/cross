@@ -28,9 +28,13 @@ body {
 	font-weight: bold;
 	line-height: 26px;
 	list-style-type: none;
-	margin: 50px 0 0 0;
+	margin: 30px 0 0 0;
 	padding: 0 0 0 40px;
 	text-align: left;
+}
+
+#menu_gauche li a.active {
+  color: black;
 }
 
 #menu_droite_wrapper {
@@ -42,9 +46,13 @@ body {
 	font-weight: bold;
 	line-height: 26px;
 	list-style-type: none;
-	margin: 50px 0 0 0;
+	margin: 30px 0 0 0;
 	padding: 0 40px 0 0;
-	text-align: right;
+	text-align: justify;
+}
+
+#menu_droite li a.active {
+  color: black;
 }
 
 .spacer {
@@ -76,9 +84,15 @@ body {
 
 #menu_haut li {
 	display: inline;
-	margin : 0 1.5em 0 1.5em;
+	margin : 0 3em 0 0;
 	font-size: small;
 	font-weight: bold;
+}
+
+
+
+#menu_haut li.last_link {
+	margin : 0;
 }
 
 #menu_artistes_link {
@@ -89,7 +103,7 @@ body {
 	list-style-type: none;
 	color : #737373;
 	padding: 0;
-	margin: 20px 0;
+	margin: 20px 260px 0 0;
 	text-align: center;
 	position: relative;
 	width: 100%;
