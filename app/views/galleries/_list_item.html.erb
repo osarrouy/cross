@@ -2,7 +2,7 @@
 <% counter = list_item_counter %>
 
 <li>
-  <% if(@gallery and @gallery.id = gallery.id) %>
+  <% if(@gallery and @gallery.id == gallery.id) %>
     <%= link_to gallery.title, gallery_path(gallery), :class => 'active' %>
   <% else %>
     <%= link_to gallery.title, gallery_path(gallery) %>
