@@ -1,7 +1,7 @@
 <% artists = Artist.find(:all, :order => "last_name ASC" )  %>
 
-<div id="menu_gauche_wrapper">
-	<ul id="menu_gauche">
+<% content_for :sidebar do %>
+  <ul id="menu_gauche">
 		<% artists.each do |artist| %>
 		  <% if((@artist and @artist.id == artist.id) or (@gallery and @gallery.artist.id == artist.id)) %>
 		    <li><%= link_to "#{artist.first_name} #{artist.last_name}", artist_path(artist), :class => 'active' %></li>
@@ -10,4 +10,4 @@
 		  <% end %>
 		<% end %>
 	</ul>
-</div>
+<% end %>

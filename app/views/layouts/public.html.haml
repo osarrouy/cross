@@ -4,9 +4,7 @@
     %title Cross
     %meta{:http_equiv => "Content-type", :content => "text/html,charset=UTF-8"}
     = stylesheet_link_tag("public")
-    = stylesheet_link_tag("shadowbox")
     = javascript_include_tag(:defaults)
-    = javascript_include_tag("shadowbox")
   %body
     .header
       %div
@@ -24,8 +22,8 @@
           = link_to "CONTACTS", :controller => 'contacts', :action => 'index'
         %li.last_link
           = link_to "LIENS", "#"
-    
-    = render :partial => '/artists/artists_menu'
+    %div#menu_gauche_wrapper
+      = yield :sidebar
     
     = yield
     

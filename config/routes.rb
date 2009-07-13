@@ -48,6 +48,7 @@ ActionController::Routing::Routes.draw do |map|
   end
   
   map.resources :artists
+  map.resources :photos, :only => [:show]
   map.resources :galleries, :member => { :minis => :get }
   map.resources :posts
   

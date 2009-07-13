@@ -1,19 +1,23 @@
+<%= render :partial => '/artists/artists_menu' %>
+
 <div id="menu_droite_wrapper">
   <ul id="menu_droite">
     <%= render :partial => "galleries/list_item", :collection => @gallery.artist.galleries %>
   </ul>
 </div>
 
+<% content_for :sidebar do %>
+  <div class="thumbs_gallery">
+    <% @gallery.photos.each do |photo| %>
+      <%= link_to(image_tag(photo.image.url(:mini), :class => 'thumb' ), photo.image.url) %>
+    <% end %>
+  </div>
+<% end %>
+
 <div class="content">
   <div id="artist">
+    <div id="photo"><%= image_tag(@gallery.photos.first.image.url) unless @gallery.photos.empty? %></div>
     <div class="indent justify"><%=h @gallery.description %></div>
-    <div class="thumbs_gallery">
-      <% @gallery.photos.each do |photo| %>
-        <%= link_to(image_tag(photo.image.url(:mini), :class => 'thumb' ), photo.image.url) %>
-      <% end %>
-    </div>
   </div>
 </div>
-    <script type="text/javascript">
-      Shadowbox.setup(".thumbs_gallery a", { title: "<%= @gallery.title %>", gallery: "<%= @gallery.title %>" });
-    </script>
+

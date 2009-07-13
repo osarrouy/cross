@@ -1,3 +1,5 @@
+<%= render :partial => '/artists/artists_menu' %>
+
 <div id="menu_droite_wrapper">
   <ul id="menu_droite">
     <%= render :partial => "galleries/list_item", :collection => @artist.galleries %>
@@ -10,6 +12,5 @@
   </div>
 </div>
 
-<%= javascript_tag "Shadowbox.init()" %>
 
 

@@ -148,7 +148,8 @@ a img {
 /* Mise en forme de la présentation des artistes */
 
 .thumbs_gallery {
-  padding: 1.5em 0 0 0;
+  padding: 30px 0 0 30px;
+  text-align: left;
 }
 
 .thumbs_gallery a img {
@@ -157,6 +158,15 @@ a img {
 
 .thumbs_gallery .thumb:hover {
   opacity: 0.6;
+}
+
+#photo {
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+#photo img {
+  width: 70%;
 }
 
 /* Mise en forme des posts */
