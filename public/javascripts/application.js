@@ -107,3 +107,49 @@ function insertGalleryToPage(request, id) {
   $('artist').update(request.responseText);
   new Effect.BlindDown('artist', { queue: { position: 'end', scope: 'contentscope' } });
 }
+
+function getPhoto(id) {
+
+  var height;
+  var width;
+  var wrapperWidth;
+  var newHeight;
+
+	new Ajax.Request('/photos/' + id + '.js', {
+			method: 'get',
+	  		onSuccess: function(transport) { 
+				var newImage = new Image();
+				newImage.onload = (function(){
+			      height = newImage.height;
+			      width = newImage.width;
+			      wrapperWidth = $('photo_wrapper').getWidth();
+			      newHeight = height * (wrapperWidth/width);
+					  new Effect.Morph('photo_wrapper', { style: { height: newHeight + 'px' },
+							  duration: 0.5, queue: { position: 'front', scope: 'photoscope' } });
+					  new Effect.Fade('spinner', { duration: 0, queue: { position: 'end', scope: 'photoscope' } });
+					  new Effect.Appear('photo', { duration: 0.5, queue: { position: 'end', scope: 'photoscope' } });
+			  }).bind(this);
+				
+				newImage.src = transport.responseText;
+				$('photo_inner').update(newImage);
+				$$('#photo_inner img')[0].setStyle({ height: newHeight + 'px' });
+				
+			}
+		}
+	);
+	
+	return false;
+}
+
+function switchPhoto(id) {
+	
+	var originalHeight = $('photo_wrapper').getHeight();
+	$('photo_wrapper').setStyle({ height: originalHeight + 'px' });
+		
+	new Effect.Fade('photo', { duration: 0.5, queue: { position: 'front', scope: 'photoscope' } });
+	new Effect.Appear('spinner', { duration: 0, queue: { position: 'end', scope: 'photoscope' } });
+
+  	getPhoto.delay(1, id);
+
+	return false;
+}

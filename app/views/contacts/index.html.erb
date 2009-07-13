@@ -1,6 +1,6 @@
 <%= render :partial => '/artists/artists_menu' %>
 
-<div class="content">
+<div class="content_wrapper">
   <% @artists.each_with_index do |artist, index| %>
     <div <%= index.odd? ? 'class="item even align_left"' : 'class="item align_left"'%>>
       <h4><%=h "#{artist.first_name} #{artist.last_name}" %></h4>

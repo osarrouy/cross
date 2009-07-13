@@ -26,7 +26,7 @@ body {
 
 #menu_gauche_wrapper {
 	float: left;
-	width: 15%;
+	width: 240px;
 }
 
 #menu_gauche {
@@ -44,7 +44,7 @@ body {
 
 #menu_droite_wrapper {
 	float: right;
-	width: 15%;
+	width: 240px;
 }
 
 #menu_droite {
@@ -53,7 +53,7 @@ body {
 	list-style-type: none;
 	margin: 30px 0 0 0;
 	padding: 0 40px 0 0;
-	text-align: right;
+	text-align: left;
 }
 
 #menu_droite li a.active {
@@ -137,12 +137,17 @@ a img {
 /* Mise en forme du contenu */
 
 .content {
-	color : #000000;
-	margin: 40px 20% 0 20%;
-	text-align: left;
-	height: 500px;
-	width: 60%;
-  overflow: auto;
+  color : #000000;
+	overflow-y: auto;
+	height: 600px;
+	padding: 0 10px;
+	width: 94%;
+}
+
+.content_wrapper {
+  color : #000000;
+  text-align: left;
+  margin: 40px 270px 0 270px;
 }
 
 /* Mise en forme de la présentation des artistes */
@@ -160,13 +165,22 @@ a img {
   opacity: 0.6;
 }
 
-#photo {
+#spinner {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+}
+
+#photo_wrapper {
     margin: 0 0 30px 0;
+}
+
+#photo {
     text-align: center;
 }
 
 #photo img {
-  width: 70%;
+  width: 100%;
 }
 
 /* Mise en forme des posts */
